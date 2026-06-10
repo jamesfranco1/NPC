@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>$NPC</title>
+  <meta name="description" content="$NPC. The NPC only cares about the dollar. NPC on USDC." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Permanent+Marker&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/npc.png" />
+</head>
+<body>
+  <div class="topstrip" aria-hidden="true"></div>
+
+  <!-- Nav -->
+  <header class="nav">
+    <a class="nav__brand" href="#top">
+      <img class="nav__mark" src="assets/npc.png" alt="" width="34" height="34" />
+      <span class="nav__name">NPC</span>
+    </a>
+    <nav class="nav__links">
+      <a href="#about">about</a>
+      <a href="#bounties">bounties</a>
+      <a href="https://x.com" target="_blank" rel="noopener">x</a>
+    </nav>
+  </header>
+
+  <!-- ================= HERO (cyan) ================= -->
+  <main id="top">
+    <section class="hero">
+      <h1 class="hero__title">$NPC</h1>
+      <p class="hero__tag">non-player character</p>
+
+      <div class="ca">
+        <span class="ca__label">CA</span>
+        <code class="ca__value" id="caValue">posted at launch</code>
+        <button class="ca__copy" id="caCopy" type="button" aria-label="Copy contract address">copy</button>
+      </div>
+
+      <p class="hero__line">npcs use the dollar and go to work. $NPC is on the dollar, and it pays people to work.</p>
+
+      <div class="badges">
+        <span class="badge badge--dark">USDC, not Solana</span>
+        <span class="badge badge--blue">risk off</span>
+        <span class="badge badge--yellow">out-traded us all</span>
+      </div>
+
+      <img class="hero__npc" src="assets/npc-hero.png" alt="The NPC" />
+    </section>
+
+    <!-- ================= WHITE SHEET ================= -->
+    <div class="sheet">
+      <!-- About -->
+      <section class="section section--about" id="about">
+        <div class="about__text">
+          <h2 class="section__title">about npc</h2>
+          <div class="prose">
+            <p>NPCs dont care about solana, they dont care about crypto, they want something safe, only half of all people have even invested in the SP500. The NPC only cares about the Dollar.</p>
+            <p>Think about the boomers just DCA into stocks, think about the retards who put all their money into gold. Those NPCs have out traded us all holding SOL.</p>
+            <p class="prose__punch">NPC on USDC</p>
+          </div>
+        </div>
+        <img class="about__npc" src="assets/npc-trans.png" alt="The NPC" />
+      </section>
+
+      <!-- Bounties -->
+      <section class="section" id="bounties">
+        <h2 class="section__title">bounties</h2>
+        <p class="section__intro">
+          tasks the npc will actually pay for. anyone can recommend one. if your recommendation gets
+          picked, you get 10% of that bounty&rsquo;s payout.
+        </p>
+
+        <div class="bounty-grid" id="activeBounties">
+          <div class="bounty-empty">no active bounties right now. recommend the first one below.</div>
+        </div>
+
+        <!-- Recommend a bounty -->
+        <div class="recommend">
+          <h3 class="recommend__title">recommend a bounty</h3>
+          <p class="recommend__note">one recommendation per wallet per day. if your idea is selected, you receive 10% of the bounty payout.</p>
+
+          <form class="recommend__form" id="bountyForm" autocomplete="off">
+            <label class="field">
+              <span class="field__label">your bounty idea</span>
+              <textarea
+                id="bountyText"
+                class="field__input"
+                rows="4"
+                maxlength="400"
+                placeholder="describe the task and what it should produce."
+                required
+              ></textarea>
+              <span class="field__count"><span id="charCount">0</span> / 400</span>
+            </label>
+
+            <label class="field">
+              <span class="field__label">your wallet address</span>
+              <input
+                id="walletInput"
+                class="field__input"
+                type="text"
+                placeholder="paste the wallet that should receive the payout"
+                spellcheck="false"
+                required
+              />
+            </label>
+
+            <button class="btn btn--solid recommend__submit" type="submit" id="submitBtn" disabled>
+              submit recommendation
+            </button>
+
+            <p class="recommend__msg" id="formMsg" role="status"></p>
+          </form>
+
+          <div class="mine" id="mine" hidden>
+            <h4 class="mine__title">your recommendations</h4>
+            <ul class="mine__list" id="mineList"></ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Closer -->
+      <section class="closer">
+        <h2 class="section__title">NPC on USDC</h2>
+        <div class="closer__actions">
+          <a class="btn btn--solid btn--lg" href="#bounties">recommend a bounty</a>
+          <a class="btn btn--line btn--lg" href="https://x.com" target="_blank" rel="noopener">follow on x</a>
+        </div>
+        <p class="footer__fine">$NPC. not financial advice.</p>
+      </section>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

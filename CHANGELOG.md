@@ -1,6 +1,7 @@
 # Changelog
 
 ## 2026-06-10
+- Updated the contract address to npc654AQbpa7WMTUynYCtKCJVFcZebG8PF1pPUAXJ9q.
 - Set the contract address to NpC4LKyHEQa3E7mtb4xrzypV4kRNedH7h8dxcqkvMqT.
 - Pointed the X links (nav and footer) to https://x.com/NPCusdc.
 - Added an "all will be converted" section with the NPC conversion comic as a framed hand-drawn panel (between About and Bounties).

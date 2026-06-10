@@ -168,6 +168,20 @@ a { color: inherit; text-decoration: none; }
   width: 100%; max-width: 320px; height: auto; justify-self: center;
 }
 
+/* Convert: comic panel left, heading right */
+.section--convert {
+  display: grid; grid-template-columns: auto 1fr;
+  gap: clamp(1.5rem, 5vw, 3.5rem); align-items: center;
+}
+.convert__img {
+  width: clamp(220px, 30vw, 300px); height: auto; justify-self: start;
+  background: #fff;
+  border: 3px solid var(--ink); border-radius: var(--wob);
+  box-shadow: 6px 8px 0 rgba(11, 37, 69, 0.14);
+  transform: rotate(-2deg);
+}
+.convert__text .section__title { margin: 0; }
+
 /* ---------- Buttons ---------- */
 .btn {
   display: inline-flex; align-items: center; justify-content: center;
